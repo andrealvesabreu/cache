@@ -1,0 +1,17 @@
+{
+	"autoload" : {
+		"psr-4" : {
+			"Inspire\\Cache\\" : "src"
+		}
+	},
+	"name" : "inspire/cache",
+	"type" : "library",
+	"license" : "MIT",
+	"require" : {
+		"php" : ">=7.4",
+		"inspire/config" : "~0.1",
+		"cache/redis-adapter" : "1.1.0",
+		"cache/memcached-adapter" : "~1.1",
+		"cache/array-adapter" : "~1.2"
+	}
+}
