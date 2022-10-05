@@ -1,5 +1,7 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
+
 namespace Inspire\Cache;
 
 use Cache\Adapter\Memcached\MemcachedCachePool;
@@ -9,7 +11,7 @@ use Cache\Adapter\Memcached\MemcachedCachePool;
  *
  * @author aalves
  */
-final class MemcachedCache extends MemcachedCachePool
+final class MemcachedCache extends MemcachedCachePool implements CacheInterface
 {
 
     public function lLen(string $item)
@@ -17,4 +19,3 @@ final class MemcachedCache extends MemcachedCachePool
         return 0;
     }
 }
-

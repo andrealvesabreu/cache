@@ -1,5 +1,7 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
+
 namespace Inspire\Cache;
 
 use Cache\Adapter\Redis\RedisCachePool;
@@ -9,7 +11,7 @@ use Cache\Adapter\Redis\RedisCachePool;
  *
  * @author aalves
  */
-final class RedisCache extends RedisCachePool
+final class RedisCache extends RedisCachePool implements CacheInterface
 {
 
     /**
@@ -88,4 +90,3 @@ final class RedisCache extends RedisCachePool
         return $this->cache;
     }
 }
-
