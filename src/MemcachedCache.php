@@ -14,6 +14,11 @@ use Cache\Adapter\Memcached\MemcachedCachePool;
 final class MemcachedCache extends MemcachedCachePool implements CacheInterface
 {
 
+    /**
+     * @param string $item
+     * 
+     * @return [type]
+     */
     public function lLen(string $item)
     {
         return 0;

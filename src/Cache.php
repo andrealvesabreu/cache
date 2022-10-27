@@ -1,5 +1,7 @@
 <?php
-declare(strict_types = 1);
+
+declare(strict_types=1);
+
 namespace Inspire\Cache;
 
 /**
@@ -28,7 +30,7 @@ abstract class Cache
         /**
          * If cache default isn't initialized yet
          */
-        if (! isset(self::$cache['default'])) {
+        if (!isset(self::$cache['default'])) {
 
             self::$cache['default'] = new CachePool('default');
         }
@@ -52,7 +54,7 @@ abstract class Cache
         /**
          * If channel default isn't initialized yet
          */
-        if (! isset(self::$cache[$channel])) {
+        if (!isset(self::$cache[$channel])) {
             self::$cache[$channel] = CacheFactory::create($channel);
         }
         /**
@@ -61,4 +63,3 @@ abstract class Cache
         return self::$cache[$channel];
     }
 }
-
