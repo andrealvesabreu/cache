@@ -18,7 +18,7 @@ abstract class CacheFactory
      * Get logger instance
      *
      * @param string $level
-     * @return CacheInterface|null
+     * @return AbstractCachePool|null
      */
     public static function create(?string $channel = null): ?AbstractCachePool
     {

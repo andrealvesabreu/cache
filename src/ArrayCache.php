@@ -13,14 +13,4 @@ use Cache\Adapter\PHPArray\ArrayCachePool;
  */
 final class ArrayCache extends ArrayCachePool
 {
-
-    /**
-     * @param string $item
-     * 
-     * @return [type]
-     */
-    public function lLen(string $item)
-    {
-        return count($this->cache);
-    }
 }
