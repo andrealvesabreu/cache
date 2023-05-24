@@ -11,7 +11,7 @@ use Cache\Adapter\Redis\RedisCachePool;
  *
  * @author aalves
  */
-final class RedisCache extends RedisCachePool
+final class RedisCache extends RedisCachePool implements CacheInterface
 {
     /**
      * Get list size

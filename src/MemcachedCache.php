@@ -11,7 +11,7 @@ use Cache\Adapter\Memcached\MemcachedCachePool;
  *
  * @author aalves
  */
-final class MemcachedCache extends MemcachedCachePool
+final class MemcachedCache extends MemcachedCachePool implements CacheInterface
 {
 
     /**

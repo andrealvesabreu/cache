@@ -11,6 +11,6 @@ use Cache\Adapter\PHPArray\ArrayCachePool;
  *
  * @author aalves
  */
-final class ArrayCache extends ArrayCachePool
+final class ArrayCache extends ArrayCachePool implements CacheInterface
 {
 }
