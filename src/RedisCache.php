@@ -32,10 +32,17 @@ final class RedisCache extends RedisCachePool implements CacheInterface
      */
     public function __call(string $name, array $args)
     {
-        return call_user_func_array([
-            $this,
-            $name
-        ], $args);
+        if (method_exists($this, $name)) {
+            return call_user_func_array([
+                $this,
+                $name
+            ], $args);
+        } else if (method_exists($this->cache, $name)) {
+            return call_user_func_array([
+                $this->cache,
+                $name
+            ], $args);
+        }
     }
 
     /**
